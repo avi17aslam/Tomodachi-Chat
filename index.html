@@ -1,0 +1,96 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tomodachi - Chat with Friends</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Login screen -->
+  <div id="loginScreen" class="login-container">
+    <div class="logo">T</div>
+    <h1>Tomodachi</h1>
+    <p class="subtitle">Your friends, just one message away.</p>
+
+    <div class="welcome">
+      <h2>Welcome to Tomodachi!</h2>
+      <p>Connect with your friends in real time.</p>
+    </div>
+
+    <button id="googleLogin" class="google-button">
+      <span class="google-icon">G</span>
+      Continue with Google
+    </button>
+
+    <p id="message" class="message">Sign in to start chatting.</p>
+    <p class="footer">Made with ❤️ for friends everywhere</p>
+  </div>
+
+  <!-- Chat screen: shown after login -->
+  <div id="chatScreen" class="chat-screen" hidden>
+    <aside class="sidebar">
+      <header class="chat-header">
+        <div class="logo small-logo">T</div>
+        <h2>Tomodachi</h2>
+        <button id="signOutButton" class="signout-button">Sign out</button>
+      </header>
+
+      <div class="profile-area">
+        <img id="myPhoto" class="avatar" alt="Your profile photo">
+        <div>
+          <strong id="myName">Your name</strong>
+          <p>Online</p>
+        </div>
+      </div>
+
+      <div class="search-area">
+        <input id="userSearch" type="email"
+          placeholder="Search friend by email">
+        <button id="searchButton">Search</button>
+      </div>
+
+      <p id="searchMessage" class="search-message"></p>
+      <div id="searchResults" class="search-results"></div>
+
+      <h3 class="section-title">Chats</h3>
+      <div id="chatList" class="chat-list">
+        <p class="empty-state">Search for a friend to start chatting.</p>
+      </div>
+    </aside>
+
+    <main class="conversation">
+      <div id="emptyChat" class="empty-chat">
+        <div class="logo">T</div>
+        <h2>Welcome to Tomodachi</h2>
+        <p>Choose a friend to start a conversation.</p>
+      </div>
+
+      <section id="activeChat" class="active-chat" hidden>
+        <header class="conversation-header">
+          <img id="friendPhoto" class="avatar" alt="Friend profile photo">
+          <div>
+            <strong id="friendName">Friend</strong>
+            <p id="friendEmail"></p>
+          </div>
+        </header>
+
+        <div id="messagesList" class="messages-list"
+          aria-live="polite"></div>
+
+        <form id="messageForm" class="message-form">
+          <input id="messageInput" type="text"
+            placeholder="Type a message..."
+            maxlength="2000" autocomplete="off" required>
+          <button id="sendButton" type="submit">Send</button>
+        </form>
+        <p id="chatNotice" class="chat-notice"></p>
+      </section>
+    </main>
+  </div>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>

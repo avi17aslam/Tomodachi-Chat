@@ -372,3 +372,51 @@ button:disabled {
     display: flex;
   }
 }
+
+/* Chat history date separator */
+.date-separator {
+  width: fit-content;
+  margin: 14px auto;
+  padding: 6px 13px;
+  border-radius: 20px;
+  background: #dce8e3;
+  color: #40564d;
+  font-size: 12px;
+  font-weight: 600;
+  text-align: center;
+}
+
+/* Latest message preview in Chat List */
+.last-message-preview {
+  display: block;
+  max-width: 220px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  margin-top: 4px;
+  color: #6b7280;
+  font-size: 12px;
+}
+/* Message time and eye status */
+.message-meta {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 5px;
+  margin-top: 5px;
+}
+
+.message-time {
+  color: #777;
+  font-size: 11px;
+}
+
+.message-status {
+  display: inline-flex;
+  color: #999999;
+  align-items: center;
+}
+
+.message-status.seen {
+  color: #2196f3;
+}

@@ -2,95 +2,402 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tomodachi - Chat with Friends</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Avi Tahsin Alam | Portfolio</title>
+
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- Login screen -->
-  <div id="loginScreen" class="login-container">
-    <div class="logo">T</div>
-    <h1>Tomodachi</h1>
-    <p class="subtitle">Your friends, just one message away.</p>
+    
 
-    <div class="welcome">
-      <h2>Welcome to Tomodachi!</h2>
-      <p>Connect with your friends in real time.</p>
+
+    <!-- Navigation Bar -->
+    <header>
+        <nav class="navbar">
+
+            <a href="#home" class="logo">
+                Abi<span>.</span>
+            </a>
+
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+
+        </nav>
+    </header>
+
+    <!-- Home Section -->
+  
+<!-- Home / Hero Section -->
+<section id="home">
+
+    <div class="hero-content">
+
+        <div class="hero-text">
+
+            <p class="hero-greeting">
+                HELLO, I'M
+            </p>
+
+            <h1>
+                Avi <span>Tahsin Alam</span>
+            </h1>
+
+            <h2>
+                Aspiring Web Developer
+            </h2>
+
+            <p class="hero-description">
+                IT Web Design Student in Japan.
+                I enjoy learning new technologies
+                and building creative web applications.
+            </p>
+
+            <p class="hero-japanese">
+                日本でIT・Webデザインを学んでいます。
+                Web開発に興味があります。
+            </p>
+
+            <div class="hero-buttons">
+                <a href="#projects" class="btn-primary">
+                    View My Projects
+                </a>
+
+                <a href="#contact" class="btn-secondary">
+                    Contact Me
+                </a>
+            </div>
+
+        </div>
+
+        <div class="hero-image">
+            <div class="profile-circle">
+    <img src="images/profile.jpg" alt="Avi Tahsin Alam">
+</div>
+        </div>
+
     </div>
 
-    <button id="googleLogin" class="google-button">
-      <span class="google-icon">G</span>
-      Continue with Google
-    </button>
+</section>
 
-    <p id="message" class="message">Sign in to start chatting.</p>
-    <p class="footer">Made with ❤️ for friends everywhere</p>
-  </div>
 
-  <!-- Chat screen: shown after login -->
-  <div id="chatScreen" class="chat-screen" hidden>
-    <aside class="sidebar">
-      <header class="chat-header">
-        <div class="logo small-logo">T</div>
-        <h2>Tomodachi</h2>
-        <button id="signOutButton" class="signout-button">Sign out</button>
-      </header>
+<!-- About Me Section -->
+<section id="about">
 
-      <div class="profile-area">
-        <img id="myPhoto" class="avatar" alt="Your profile photo">
-        <div>
-          <strong id="myName">Your name</strong>
-          <p>Online</p>
+    <div class="section-heading">
+        <p>GET TO KNOW ME</p>
+        <h2>About <span>Me</span></h2>
+        <h3>私について</h3>
+    </div>
+
+    <div class="about-content">
+
+        <div class="about-text">
+            <h3>Hello! I'm Avi Tahsin Alam.</h3>
+
+            <p>
+                I am an IT Web Design student at
+                Waseda Bunri College in Japan.
+                I am passionate about web development
+                and software engineering.
+            </p>
+
+            <p>
+                I enjoy learning new technologies
+                and creating practical web applications.
+                Currently, I am developing personal projects
+                to improve my programming skills.
+            </p>
+
+            <p class="about-japanese">
+                日本の早稲田文理専門学校でIT・Webデザインを
+                学んでいます。Web開発に興味があり、
+                新しい技術を学びながら個人プロジェクトを
+                制作しています。
+            </p>
         </div>
-      </div>
 
-      <div class="search-area">
-        <input id="userSearch" type="email"
-          placeholder="Search friend by email">
-        <button id="searchButton">Search</button>
-      </div>
+        <div class="about-info">
 
-      <p id="searchMessage" class="search-message"></p>
-      <div id="searchResults" class="search-results"></div>
+            <div class="info-card">
+                <h4>Education</h4>
+                <p>Waseda Bunri College</p>
+            </div>
 
-      <h3 class="section-title">Chats</h3>
-      <div id="chatList" class="chat-list">
-        <p class="empty-state">Search for a friend to start chatting.</p>
-      </div>
-    </aside>
+            <div class="info-card">
+                <h4>Course</h4>
+                <p>IT Web Design</p>
+            </div>
 
-    <main class="conversation">
-      <div id="emptyChat" class="empty-chat">
-        <div class="logo">T</div>
-        <h2>Welcome to Tomodachi</h2>
-        <p>Choose a friend to start a conversation.</p>
-      </div>
+            <div class="info-card">
+                <h4>Location</h4>
+                <p>Japan 🇯🇵</p>
+            </div>
 
-      <section id="activeChat" class="active-chat" hidden>
-        <header class="conversation-header">
-          <img id="friendPhoto" class="avatar" alt="Friend profile photo">
-          <div>
-            <strong id="friendName">Friend</strong>
-            <p id="friendEmail"></p>
-          </div>
-        </header>
+            <div class="info-card">
+                <h4>Graduation</h4>
+                <p>March 2027</p>
+            </div>
 
-        <div id="messagesList" class="messages-list"
-          aria-live="polite"></div>
+        </div>
 
-        <form id="messageForm" class="message-form">
-          <input id="messageInput" type="text"
-            placeholder="Type a message..."
-            maxlength="2000" autocomplete="off" required>
-          <button id="sendButton" type="submit">Send</button>
-        </form>
-        <p id="chatNotice" class="chat-notice"></p>
-      </section>
-    </main>
-  </div>
+    </div>
 
-  <script type="module" src="app.js"></script>
+</section>
+
+
+<!-- Technical Skills Section -->
+<section id="skills">
+
+    <div class="section-heading">
+        <p>WHAT I AM LEARNING</p>
+        <h2>Technical <span>Skills</span></h2>
+        <h3>技術スキル</h3>
+    </div>
+
+    <div class="skills-grid">
+
+        <div class="skill-card">
+            <div class="skill-icon">H5</div>
+            <h3>HTML</h3>
+            <p>Website Structure</p>
+            <span>Learning</span>
+        </div>
+
+        <div class="skill-card">
+            <div class="skill-icon">C3</div>
+            <h3>CSS</h3>
+            <p>Web Design & Styling</p>
+            <span>Learning</span>
+        </div>
+
+        <div class="skill-card">
+            <div class="skill-icon">JS</div>
+            <h3>JavaScript</h3>
+            <p>Interactive Features</p>
+            <span>Learning</span>
+        </div>
+
+        <div class="skill-card">
+            <div class="skill-icon">J</div>
+            <h3>Java</h3>
+            <p>Programming Fundamentals</p>
+            <span>Learning</span>
+        </div>
+
+        <div class="skill-card">
+            <div class="skill-icon">SQL</div>
+            <h3>SQL</h3>
+            <p>Database Management</p>
+            <span>Learning</span>
+        </div>
+
+        <div class="skill-card">
+            <div class="skill-icon">FB</div>
+            <h3>Firebase</h3>
+            <p>Authentication & Realtime Data</p>
+            <span>Learning</span>
+        </div>
+
+        <div class="skill-card">
+            <div class="skill-icon">GH</div>
+            <h3>Git & GitHub</h3>
+            <p>Version Control</p>
+            <span>Learning</span>
+        </div>
+
+    </div>
+
+</section>
+
+    
+<!-- Projects Section -->
+<section id="projects">
+
+    <div class="section-heading">
+        <p>MY RECENT WORK</p>
+        <h2>My <span>Projects</span></h2>
+        <h3>制作実績</h3>
+    </div>
+
+    <div class="projects-container">
+
+        <!-- Japan CricNavi -->
+        <div class="project-card">
+
+           <div class="project-icon">
+    <img src="images/japan-cricknavi.png"
+         alt="Japan CricNavi Website">
+</div>
+
+            <div class="project-content">
+                <span class="project-status">In Progress</span>
+
+                <h3>Japan CricNavi</h3>
+
+                <p>
+                    A cricket web application project
+                    designed to explore match scoring,
+                    live updates and cricket history
+                    for cricket lovers in Japan.
+                </p>
+
+                <p class="project-japanese">
+                    日本のクリケットファン向けの
+                    Webアプリケーションを制作しています。
+                </p>
+
+                <div class="project-tech">
+                    <span>HTML</span>
+                    <span>CSS</span>
+                    <span>JavaScript</span>
+                    <span>LocalStorage</span>
+                </div>
+
+                <div class="project-links">
+                    <a href="" target="_blank">Live Demo ↗</a>
+                    <a href="#" target="_blank">GitHub ↗</a>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Tomodachi -->
+        <div class="project-card">
+
+          <div class="project-icon">
+    <img src="images/tomodachi.png"
+         alt="Tomodachi Chat Application">
+</div>
+
+            <div class="project-content">
+                <span class="project-status">In Progress</span>
+
+                <h3>Tomodachi</h3>
+
+                <p>
+                    A real-time chat application project
+                    with Google Authentication,
+                    messaging and online status features.
+                </p>
+
+                <p class="project-japanese">
+                    Googleログインとリアルタイム
+                    メッセージ機能を備えたチャットアプリです。
+                </p>
+
+                <div class="project-tech">
+                    <span>HTML</span>
+                    <span>CSS</span>
+                    <span>JavaScript</span>
+                    <span>Firebase</span>
+                </div>
+
+<div class="project-links">
+
+    <a href="https://avi17aslam.github.io/Tomodachi-Chat/"
+       target="_blank"
+       rel="noopener noreferrer">
+        Live Demo ↗
+    </a>
+
+    <a href="https://github.com/avi17aslam/Tomodachi-Chat"
+       target="_blank"
+       rel="noopener noreferrer">
+        GitHub ↗
+    </a>
+
+</div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- Contact Section -->
+<section id="contact">
+
+    <div class="section-heading">
+        <p>GET IN TOUCH</p>
+        <h2>Contact <span>Me</span></h2>
+        <h3>お問い合わせ</h3>
+    </div>
+
+    <div class="contact-content">
+
+        <h3>Let's work together!</h3>
+
+        <p>
+            Thank you for visiting my portfolio.
+            I am always interested in learning,
+            connecting and discussing new opportunities.
+        </p>
+
+        <p class="contact-japanese">
+            ポートフォリオをご覧いただきありがとうございます。
+            新しい出会いや機会を楽しみにしています。
+        </p>
+
+        <div class="contact-cards">
+
+            <a href="mailto:junior.avi011@gmail.com"
+               class="contact-card">
+                <div class="contact-icon">✉</div>
+                <h4>Email</h4>
+                <p>Send me an email</p>
+            </a>
+
+            <a href="https://github.com/avi17aslam"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="contact-card">
+                <div class="contact-icon">GH</div>
+                <h4>GitHub</h4>
+                <p>Explore my projects</p>
+            </a>
+
+            <a href="https://www.linkedin.com/in/junior-avi-7756333b4/"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="contact-card">
+                <div class="contact-icon">in</div>
+                <h4>LinkedIn</h4>
+                <p>Connect with me</p>
+            </a>
+
+        </div>
+
+        <p class="contact-location">
+            📍 Location: Japan 
+        </p>
+
+    </div>
+
+</section>
+
+<!-- Footer -->
+<footer>
+    <p>
+        © 2026 Avi Tahsin Alam.
+        All Rights Reserved.
+    </p>
+    <a href="#home">Back to Top ↑</a>
+</footer>
+
+
+    <script src="script.js"></script>
+
 </body>
+
 </html>
